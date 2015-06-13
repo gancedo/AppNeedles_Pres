@@ -1,0 +1,89 @@
+Gauge that gauge!
+========================================================
+author: Isabel Gancedo - Part-time Knitter
+date: June 2015
+font-import: http://fonts.googleapis.com/css?family=Abel
+font-family:'Abel'
+
+
+
+```{r, echo=FALSE}
+footer <- "<div  style=\"position:absolute;bottom:-3%;left:55%\"><a href=\"https://gancedo.shinyapps.io/AppNeedles\">AppNeedles</a></div>
+<div  style=\"position:absolute;bottom:-5%;left:0%\"><a href=\"http://gancedo.eu\"><img style=\"width:250px;\" SRC=\"logo.gif\"></a></div>"
+```
+
+An introduction to https://gancedo.shinyapps.io/AppNeedles
+
+<div style="position:absolute;bottom:10%;left:40%"><img style="width:250px;" SRC="plot.png">
+</div>
+
+
+<div style="position:absolute;bottom:0%;left:0%"><a href="http://gancedo.eu"><img SRC="logo.gif"></a></div>
+
+
+
+
+Tension
+========================================================
+`r footer`
+Knitting patterns usually include information on the *gauge* or *tension* needed for the pattern, and the recommended needle size.
+
+But how usual is that needle/ gauge combination?
+
+*** 
+![alt text](gauge.png)
+
+***
+<small>Pattern with gauge and recommended needle size.</small>
+
+
+How to check (1)
+========================================================
+`r footer`
+1 - Select nr of stitches
+
+![alt text](slider.png)
+
+Move the slider until it shows the number you want.
+
+***
+
+2 - Select needle sizes
+
+![alt text](radio.png)
+
+Choose which system you prefer for the needle sizes: metric (mm) or US numbers.
+
+
+
+How to check (2)
+========================================================
+`r footer`
+3 - Check the plot
+
+![alt text](plot.png)
+
+***
+
+4 - Compare with sizes in results
+
+![alt text](table.png)
+
+Data
+========================================================
+`r footer`
+Data were collected in June 2015 from the sites of several manufacturers of knitting yarns.
+
+Not all needle sizes are equally represented in the dataset. Coarser yarns, which require thicker needles, are relatively rare. 
+
+***
+```{r echo=FALSE}
+
+load("wool.Rda")
+
+hist(wool$mm, 
+     xlab="Metric sizes (mm)",
+     col="#FFA584",
+     border = "white",
+     main="Frequency of needle sizes")
+```
